@@ -1,15 +1,15 @@
 # Stock_Analysis_with_VBA
 Create VBA script for Stock Data Analysis, loop through Stock Market Data and return Yearly Stock Performance Results.
 
-### Initial Stock Market Data Spreadsheet
-* [Stock Data] (Multiple_year_stock_data.xlsx)
+### Initial Stock Market Data:
+![Stock Data] (Multiple_year_stock_data.xlsx)
 
 ### The Objective of the Project:
 The objective of this project is to create a VBA script that provides easy analysis of yearly stock performance. The worksheets are organized by year and contain the starting, final, highest, and lowest value of each stock for each day of the year. The VBA script will give the yearly increase/decrease in stock value for each stock, the percentage change over the year, and the total volume for the year. In addition the stock will give the greatest increase, decrease, and total volume.
 
-The data has been sorted such that the stocks are grouped together by ticker value
+The data has been sorted such that the stocks are grouped together by ticker value in alphabetical order
 The data is sorted by date such that the dates are in order with the first date for a given stock is the begining of the year and the last value for a give stock is the last date of the year traded.
-Non-zero stock value is not assumed. The data in the spreadsheets represents the complete data with no missing values
+Non-zero stock value is not assumed. The data in the spreadsheets represents the complete data with no missing values.
 
 * Extract Ticker Symbols:
 The unique ticker symbols are extracted and inserted into a column.
@@ -36,15 +36,7 @@ The "Greatest % Increase", "Greatest % Decrease", and "Greatest Yearly Volume" a
 
 ### VBA code:
 
-BEGIN
-  MultiUse = -1  'True
-END
-Attribute VB_Name = "Sheet1"
-Attribute VB_GlobalNameSpace = False
-Attribute VB_Creatable = False
-Attribute VB_PredeclaredId = True
-Attribute VB_Exposed = True
-' Hard Solution VB code - HW2 VBA - Inna Baloyan May2018 Bootcamp
+' Hard Solution VB code - Inna Baloyan May2018 Bootcamp
 ' Going through all worksheets
 Sub WorksheetsLoop()
 

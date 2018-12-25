@@ -1,40 +1,36 @@
 # Stock_Analysis_with_VBA
-Create Stock Analysis using VBA for going through the Excel Spreadsheet containing Stock Data and returning Yearly Performance results
+Create VBA script for Stock Data Analysis, loop through Stock Market Data and return Yearly Stock Performance Results.
 
+### Initial Stock Market Data Spreadsheet
+* [Stock Data] (Multiple_year_stock_data.xlsx)
 
-### Background
+### The Objective of the Project:
+The objective of this project is to create a VBA script that provides easy analysis of yearly stock performance. The worksheets are organized by year and contain the starting, final, highest, and lowest value of each stock for each day of the year. The VBA script will give the yearly increase/decrease in stock value for each stock, the percentage change over the year, and the total volume for the year. In addition the stock will give the greatest increase, decrease, and total volume.
 
-You are well on your way to becoming a programmer and Excel master! In this homework assignment you will use VBA scripting to analyze real stock market data. Depending on your comfort level with VBA, choose your assignment from Easy, Moderate, or Hard below.
+The data has been sorted such that the stocks are grouped together by ticker value
+The data is sorted by date such that the dates are in order with the first date for a given stock is the begining of the year and the last value for a give stock is the last date of the year traded.
+Non-zero stock value is not assumed. The data in the spreadsheets represents the complete data with no missing values
 
-### Stock market analysis
+* Extract Ticker Symbols:
+The unique ticker symbols are extracted and inserted into a column.
 
-![stock Market](Images/stockmarket.jpg)
+* Extract Initial and Final Values for Stock Price:
+The initial and final values for the stock price. As non-zero values are not assumed, the first non-zero value is taken to avoid division by zero.
 
-* Create a script that will loop through each year of stock data and grab the total amount of volume each stock had over the year.
+* Calculate Yearly Change, Percentage Change, Total Volume:
+The values are calculated for yearly change in stock values, yearly percentage change, and yearly total volume. Values are displayed in spreadsheet next to corresponding ticker value.
+Yearly Change = Final Value - Initial (non-zero) Value
+Percentage Change = Yearly Change / Initial (non-zero) Value
+Total Volume = Sum(Daily Volume)
 
-* You will also need to display the ticker symbol to coincide with the total volume.
+* Determine Max and Min values:
+The "Greatest % Increase", "Greatest % Decrease", and "Greatest Yearly Volume" are determined from the values calculated in the last step and displayed in the chart.
 
-* Create a script that will loop through all the stocks and take the following info.
+* Provide conditional formatting that will highlight positive change in green and negative change in red.
 
-   * Yearly change from what the stock opened the year at to what the closing price was.
+* VBA script is run once and produces all appropriate adjustments on every worksheet.
 
-   * The percent change from the what it opened the year at to what it closed.
-
-   * The total Volume of the stock
-
-   * Ticker symbol
-
-* You should also have conditional formatting that will highlight positive change in green and negative change in red.
-
-* The result should look as follows.
-
-* Your solution will include everything from the moderate challenge.
-
-* Your solution will also be able to locate the stock with the "Greatest % increase", "Greatest % Decrease" and "Greatest total volume".
-
-* Make the appropriate adjustments to your script that will allow it to run on every worksheet just by running it once.
-
-* Solution will look as follows.
+### Yearly Stock Performance Results ( 2014-2016 )
 
 ![hard_solution](Images/ib_2016_screenshot_hard_solution.png)
 

@@ -2,7 +2,7 @@
 Create VBA script for Stock Data Analysis, loop through Stock Market Data and return Yearly Stock Performance Results.
 
 ### Initial Stock Market Data:
-![Stock Data](Multiple_year_stock_data.xlsx)
+![Stock Data](./Multiple_year_stock_data.xlsx)
 
 ### The Objective of the Project:
 The objective of this project is to create a VBA script that provides easy analysis of yearly stock performance. The worksheets are organized by year and contain the starting, final, highest, and lowest value of each stock for each day of the year. The VBA script will give the yearly increase/decrease in stock value for each stock, the percentage change over the year, and the total volume for the year. In addition the stock will give the greatest increase, decrease, and total volume.
@@ -120,8 +120,7 @@ Sub WorksheetsLoop()
             ' Loop from the beginning of the current worksheet(Row2) till its last row
             For i = 2 To Lastrow
             
-
-            
+          
                 ' Check if we are still within the same ticker name,
                 ' if not - write results to summary table
                 If CurrentWs.Cells(i + 1, 1).Value <> CurrentWs.Cells(i, 1).Value Then
